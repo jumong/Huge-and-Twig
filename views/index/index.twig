@@ -1,0 +1,47 @@
+{% extends "twig/base.twig" %}
+
+{% block head %}
+
+{{ parent() }}
+
+<!-- your page css here-->
+
+<link rel="stylesheet" href="{{ DIR.CSS_PATH }}something.css">
+
+<style type="text/css">
+
+    #title {   color: dodgerBlue;  }
+
+</style>
+
+{% endblock %}
+
+<!--this is your page content -->
+
+{% block content %}
+
+
+<h1 id="title">Some Wise Heading</h1>
+
+
+<p>Bacon ipsum dolor amet filet mignon jerky bresaola, fatback pork short loin picanha landjaeger spare ribs sausage
+    drumstick venison pork chop corned beef sirloin. Kielbasa drumstick short ribs picanha filet mignon ham pancetta
+    leberkas jerky biltong turkey tail ground round turducken. Swine pork venison beef, ground round pork belly turkey
+    fatback spare ribs.</p>
+
+
+{% endblock %}
+
+<!--this is your page js-->
+
+{% block jsfooter %}
+
+<link rel="stylesheet" href="{{ DIR.BOWER_PATH }}something/something.js">
+
+<script type="text/javascript">
+
+    $('.something').something({});
+
+</script>
+
+{% endblock %}

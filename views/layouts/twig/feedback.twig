@@ -1,0 +1,49 @@
+
+{% if feedback.positive is defined %}
+
+    <div class="callout success" data-closable">
+    {#<h5 style="color: white;">Success</h5>#}
+
+        {% for user in feedback.positive %}
+             <div>{{ user }}</div>
+        {% endfor %}
+
+    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+    <span aria-hidden="true"><i class="ion-ios-close-empty"></i> </span>
+    </button>
+    </div>
+
+{% endif %}
+
+
+{% if feedback.negative is defined %}
+
+    <div class="callout alert" data-closable">
+
+        {% for user in feedback.negative %}
+             <div>{{ user }}</div>
+        {% endfor %}
+
+    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+    <span aria-hidden="true"><i class="ion-ios-close-empty"></i> </span>
+    </button>
+    </div>
+    
+{% endif %}
+
+
+{% if feedback.danger is defined %}
+
+    <div class="callout alert" data-closable">
+
+        {% for user in feedback.danger %}
+             <div>{{ user }}</div>
+        {% endfor %}
+
+    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+    <span aria-hidden="true"><i class="ion-ios-close-empty"></i> </span>
+    </button>
+    </div>
+
+{% endif %}
+

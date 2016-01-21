@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="something about my site">
+    <meta name="diogenes" content="truth.com">
+
+    {% block head %}
+
+        <title>
+            {% block title %}
+                {% if pageTitle is defined %}
+                    {{ pageTitle }}
+                {% endif %}
+            {% endblock %}
+        </title>
+
+        <link rel="stylesheet" href="{{ dir.CSS_PATH }}app.css">
+
+    {% endblock %}
+
+</head>
+
+<body>
+
+{% include "twig/header.twig" %}
+
+{% include "twig/feedback.twig" %}
+
+<section id="main-panel" role="main">
+
+    {% block content %}{% endblock %}
+
+</section>
+
+{% include "twig/footer.twig" %}
+
+<script src="{{ dir.BOWER_PATH }}jquery/dist/jquery.js"></script>
+<script src="{{ dir.BOWER_PATH }}foundation-sites/dist/foundation.js"></script>
+<script src="{{ dir.PUBLIC_ROOT }}js/min/app-min.js"></script>
+
+<script type="text/javascript">
+
+
+</script>
+
+
+{% block jsfooter %}{% endblock %}
+
+</body>
+
+</html>
