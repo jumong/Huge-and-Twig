@@ -2,7 +2,6 @@
 {% if feedback.positive is defined %}
 
     <div class="callout success" data-closable">
-    {#<h5 style="color: white;">Success</h5>#}
 
         {% for user in feedback.positive %}
              <div>{{ user }}</div>
@@ -14,7 +13,6 @@
     </div>
 
 {% endif %}
-
 
 {% if feedback.negative is defined %}
 
@@ -30,7 +28,6 @@
     </div>
     
 {% endif %}
-
 
 {% if feedback.danger is defined %}
 

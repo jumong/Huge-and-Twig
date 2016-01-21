@@ -12,7 +12,7 @@ I came up with two approaches for using Twig.
 
 The vanilla way is to put it into the Controller or I modified a static function I found written by Gabriel Maftei for Simple MVC.
 
-You get either can use:  $this->twig($data) or Twig::render($data).
+You can either use:  $this->twig($data) or Twig::render($data).
 
 I prefer the second approach because you do not need to pass an empty $data and you can set and change your file extention.  (Twig can use many file extentions like .html, .php or .twig)
 
@@ -41,7 +41,7 @@ The only folder in my layouts is the Twig folder with the templates.  Simple and
 
 Remember Twig does not take PHP so be sure to get to know all the Twig filters, tags, functions and operators.  Pretty simple and straight foreward.
 
-Example, echo $data['dog']->name  is just {{ dog.name }}. 
+Example, <?php echo $data['dog']->name ?> is just {{ dog.name }}. 
 
 A date funtion would look like:  {{ "now"|date("m/d/Y") }}
 

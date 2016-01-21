@@ -24,7 +24,6 @@ class IndexController extends Controller
         $data = [
 
             "dir" => Config::get('DIRS'),
-            "description" => Config::get('DESCRIPT'),
             "pageTitle" => 'Index Page',
             "feedback" => FlashAlert::renderFeedbackMessages(),
 
